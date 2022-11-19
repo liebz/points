@@ -144,7 +144,6 @@ class PointsServiceTests {
             )
         )
 
-
         pointsService.addTransactionForPayer(payer, amount, timestamp)
 
         assertEquals(0, existingPointsTransaction_1.remainingBalance)

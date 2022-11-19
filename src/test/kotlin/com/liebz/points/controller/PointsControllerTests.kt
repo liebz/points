@@ -44,6 +44,7 @@ class PointsControllerTests {
         val payer = "DANNON"
         val points = 500
         val timestamp = Instant.now()
+
         whenever(pointsService.addTransactionForPayer(payer, points, timestamp)).thenReturn(
             PointsTransaction(
                 payer = payer,

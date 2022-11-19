@@ -54,9 +54,8 @@ class PointsService(
             throw NotEnoughPointsException(totalPoints, pointsToRemove)
         }
 
-        val sortedPointsTransactions = pointsTransactions
-            .filter { it.remainingBalance > 0 }
-            .sortedBy { it.timestamp }
+        val sortedPointsTransactions = pointsTransactions.filter { it.remainingBalance > 0 }
+                                                        .sortedBy { it.timestamp }
         var remainingPointsToRemove = pointsToRemove
 
         loop@ for (oldestPointsTransaction in sortedPointsTransactions) {
