@@ -4,17 +4,22 @@
 ## Requirements:
 Java 8 - SdkMan can be used to easily install and switch between JDKs - https://sdkman.io/jdks
 
+## Technical Notes:
+* Written in Kotlin (JVM target 1.8)
+* Spring Boot version `2.7.5`
+* Built with Gradle version `7.5.1`
+
 ## How to Run:
-Use the included gradle wrapper for the following
+**Use the included gradle wrapper for the following**
   * Starting the service - `./gradlew bootRun`
     * The app will run on port 8080 - http://localhost:8080
-    * this will handle building the app too. If you would to build the app before running it use - `./gradlew clean build`
+    * this will handle building the app too. If you would like to build the app before running it use - `./gradlew clean build`
   * Run unit tests - `./gradlew test`
     * Any failed tests will display in the terminal
-    * If all tests passed `BUILD SUCCESSFUL` will be displayed
+    * If all tests passed, `BUILD SUCCESSFUL` will be displayed
 
 ---
-## API Endpoints
+## API Endpoints:
 * see `FR.postman_collection.json` for a Postman collection with examples for the below requests
 ### Return all payer point balances 
 #### GET `/api/points`
