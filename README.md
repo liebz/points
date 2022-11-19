@@ -1,10 +1,10 @@
-##Fetch Rewards Backend Coding Challenge
+## Fetch Rewards Backend Coding Challenge
 * https://fetch-hiring.s3.us-east-1.amazonaws.com/points.pdf
 ---
-##Requirements:
+## Requirements:
 Java 8 - SdkMan can be used to easily install and switch between JDKs - https://sdkman.io/jdks
 
-##How to Run:
+## How to Run:
 Use the included gradle wrapper for the following
   * Starting the service - `./gradlew bootRun`
     * The app will run on port 8080 - http://localhost:8080
@@ -14,15 +14,15 @@ Use the included gradle wrapper for the following
     * If all tests passed `BUILD SUCCESSFUL` will be displayed
 
 ---
-##API Endpoints
-###Return all payer point balances 
-####GET `/api/points`
-####Parameters - None
-####Sample curl 
+## API Endpoints
+### Return all payer point balances 
+#### GET `/api/points`
+#### Parameters - None
+#### Sample curl 
 ```
 curl --location --request GET 'localhost:8080/api/points'
 ```
-####Sample Response
+#### Sample Response
 ```
 {
     "DANNON": 500,
@@ -31,13 +31,13 @@ curl --location --request GET 'localhost:8080/api/points'
 }
 ```
 
-###Add Payer Transaction 
-####POST `/api/points` 
-####Parameters
+### Add Payer Transaction 
+#### POST `/api/points` 
+#### Parameters
 * `payer` - **String** - _required_ 
 * `points` - **Integer** - _required_
 * `timestamp` - **Timestamp** - _required_ - format `yyyy-MM-dd'T'HH:mm:ss'Z'`
-####Example payload
+#### Example payload
 ```
 {
     "payer": "UNILEVER",
@@ -45,7 +45,7 @@ curl --location --request GET 'localhost:8080/api/points'
     "timestamp": "2022-11-18T11:00:00Z"
 }
 ```
-####Sample curl 
+#### Sample curl 
 ```
 curl --location --request POST 'localhost:8080/api/points' \
 --header 'Content-Type: application/json' \
@@ -55,7 +55,7 @@ curl --location --request POST 'localhost:8080/api/points' \
     "timestamp": "2022-11-18T11:00:00Z"
 }'
 ```
-####Sample Response
+#### Sample Response
 ```
 {
     "payer": "UNILEVER",
@@ -64,17 +64,17 @@ curl --location --request POST 'localhost:8080/api/points' \
 }
 ```
 
-###Spend Points
-####POST `/api/spend`
-####Parameters
+### Spend Points
+#### POST `/api/spend`
+#### Parameters
 * `points` - **Integer** - _required_ - must be a positive integer
-####Example payload
+#### Example payload
 ```
 {
     "points": 500
 }
 ```
-####Sample curl
+#### Sample curl
 ```
 curl --location --request POST 'localhost:8080/api/spend' \
 --header 'Content-Type: application/json' \
@@ -82,7 +82,7 @@ curl --location --request POST 'localhost:8080/api/spend' \
     "points": 700
 }'
 ```
-####Sample Response
+#### Sample Response
 ```
 [
     {
