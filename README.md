@@ -1,6 +1,6 @@
 ##Fetch Rewards Backend Coding Challenge
 * https://fetch-hiring.s3.us-east-1.amazonaws.com/points.pdf
-
+---
 ##Requirements:
 Java 8 - SdkMan can be used to easily install and switch between JDKs - https://sdkman.io/jdks
 
@@ -13,6 +13,7 @@ Use the included gradle wrapper for the following
     * Any failed tests will display in the terminal
     * If all tests passed `BUILD SUCCESSFUL` will be displayed
 
+---
 ##API Endpoints
 ###Return all payer point balances 
 ####GET `/api/points`
@@ -35,7 +36,7 @@ curl --location --request GET 'localhost:8080/api/points'
 ####Parameters
 * `payer` - **String** - _required_ 
 * `points` - **Integer** - _required_
-* `timestamp` - **DateTime** - _required_ - format `yyyy-MM-dd'T'HH:mm:ss'Z'`
+* `timestamp` - **Timestamp** - _required_ - format `yyyy-MM-dd'T'HH:mm:ss'Z'`
 ####Example payload
 ```
 {
