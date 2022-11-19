@@ -15,6 +15,7 @@ Use the included gradle wrapper for the following
 
 ---
 ## API Endpoints
+* see `FR.postman_collection.json` for a Postman collection with examples for the below requests
 ### Return all payer point balances 
 #### GET `/api/points`
 #### Parameters - None

@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "9d338448-9a63-4feb-b431-030f8e738a3d",
+		"name": "FR",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST - create points transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"payer\": \"UNILEVER\",\n    \"points\": 1000,\n    \"timestamp\": \"2022-11-18T11:00:00Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/points",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"points"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - spend points",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"points\": 700\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/spend",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"spend"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - points summary",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/points",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"points"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
