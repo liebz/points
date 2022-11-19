@@ -1,4 +1,4 @@
-package com.liebz.points
+package com.liebz.points.controller
 
 import com.liebz.points.data.model.PointsTransaction
 import com.liebz.points.rest.controller.PointsController
